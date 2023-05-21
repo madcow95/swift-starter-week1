@@ -52,7 +52,6 @@ let someArray: [[[Int?]?]?] = [[[1, 2], nil, [3, nil, 4], nil, [5, 6]]]
  */
 
 // 1. 하드코딩
-var threeExist: Bool = false
 for first in someArray {
     if let first = first {
         for second in first {
@@ -60,19 +59,12 @@ for first in someArray {
                 for third in second {
                     if let third = third {
                         if third == 3 {
-                            threeExist = true
 //                            print(third)
                             break
                         }
                     }
                 }
-                if threeExist {
-                    break
-                }
             }
-        }
-        if threeExist {
-            break
         }
     }
 }
