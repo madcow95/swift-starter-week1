@@ -71,3 +71,11 @@ for first in someArray {
 
 // 2. n차원 배열 => 1차원 배열
 let test = someArray
+
+var lotterySet = Set<Int>()
+while lotterySet.count != 6 {
+    if let randomNumber = (1...45).randomElement() {
+        lotterySet.insert(randomNumber)
+    }
+}
+print(lotterySet)
